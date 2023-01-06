@@ -1,18 +1,33 @@
-// "use strict";
+"use strict";
 
-// let numberOfSeries;
+var clientBudget = prompt("Byudjetingizni kiriting!!!", "1000$");
 
-// function startModal() {
-//   numberOfSeries = +prompt("Shu hafta nechta serial ko'rdingiz");
+var expenses = {
+  ticketPrice: 500 * 10650.34,
+  hotelPrice: 250 * 10650.34,
+  parkPrice: 120 * 10650.03,
+};
 
-//   while (
-//     numberOfSeries == "" ||
-//     numberOfSeries == null ||
-//     isNaN(numberOfSeries)
-//   ) {
-//     numberOfSeries = +prompt("Shu hafta nechta serial ko'rdingiz");
-//   }
-// }
+var total =
+  expenses.ticketPrice + expenses.hotelPrice + expenses.parkPrice + "sum";
+
+console.log(clientBudget, expenses, total);
+alert(`sizning budjetingiz ${clientBudget}` + " - " + `xarajatlar ${total}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // startModal();
 
@@ -64,7 +79,7 @@
 
 // function writeGenres() {
 //   for (let i = 0; i <= 2; i++) {
-//     const ozgarmas = prompt(`Yaxshi ko'rgan janringiz ${i + 1}`);
+// const ozgarmas = prompt(`Yaxshi ko'rgan janringiz ${i + 1}`);
 //     seriesDB.genres[i] = ozgarmas;
 //   }
 // }
@@ -102,6 +117,3 @@
 // const { hair, tShirt, interest } = alirahmon;
 
 // console.log(hair, tShirt, interest);
-
-
-
