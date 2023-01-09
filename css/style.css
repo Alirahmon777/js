@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/eva-darron-oCdVtGFeDC0-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-glass {
+  backdrop-filter: saturate(100%) blur(25px);
+  border: none !important;
+}
+
+.form-check-label,
+.form-label {
+  color: #8cb1f3;
+  transition: 0.3s ease-in-out;
+}
+
+.form-control:focus ~ .form-label {
+  color: #fff;
+}
+.form-check-input:checked ~ .form-check-label {
+  color: #fff;
+}
+
+.desc {
+  text-align: center;
+  margin: 100px auto !important;
+}
+
+.hidden-card {
+  display: none;
+  margin-top: 40px !important;
+  animation: popup 0.8s;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button {
+  margin-top: 25px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.button-al {
+  margin-bottom: 0 !important;
+}
+
+.button,
+.button-al,
+.cancel {
+  padding: 12px 26px;
+  border: none;
+  background: #2fa1f3;
+  color: #fff;
+  border-radius: 15px;
+  transition: all 0.3s linear;
+}
+
+.button:hover,
+.button-al:hover,
+.cancel:hover {
+  background-color: #8cb1f3;
+}
+
+.button:active,
+.button-al:active,
+.cancel:active {
+  background-color: #8cb1f3;
+}
+
+.alert-box {
+  position: relative;
+  top: -200px;
+  transform: translateX(30%);
+}
+
+.alert {
+  padding-right: 20px !important;
+}
+
+@keyframes alert {
+  0% {
+    top: 0px;
+  }
+
+  100% {
+    top: 200px;
+  }
+}

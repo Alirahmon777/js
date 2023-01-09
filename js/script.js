@@ -1,33 +1,99 @@
 "use strict";
 
-var clientBudget = prompt("Byudjetingizni kiriting!!!", "1000$");
+var dollar = 10650.34;
+var euro = 10650.03;
 
 var expenses = {
-  ticketPrice: 500 * 10650.34,
-  hotelPrice: 250 * 10650.34,
-  parkPrice: 120 * 10650.03,
+  ticketPrice: 500 * dollar,
+  hotelPrice: 250 * dollar,
+  parkPrice: 120 * euro,
 };
+var total = expenses.ticketPrice + expenses.hotelPrice + expenses.parkPrice;
 
-var total =
-  expenses.ticketPrice + expenses.hotelPrice + expenses.parkPrice + "sum";
+document.querySelector(".button").addEventListener("click", () => {
+  card.setAttribute("style", "display: flex;");
+  content.setAttribute("class", "col-lg-6 mb-5 mb-lg-0 desc text-end");
+  content.setAttribute("style", "transition: all 2s linear");
 
-console.log(clientBudget, expenses, total);
-alert(`sizning budjetingiz ${clientBudget}` + " - " + `xarajatlar ${total}`);
+  title.setAttribute(
+    "style",
+    "margin: 0 0 20px !important; color: hsl(218, 81%, 95%);"
+  );
+});
 
+var content = document.querySelector(".desc");
+var title = document.querySelector(".title");
+var card = document.querySelector(".hidden-card");
 
+document.querySelector(".cancel").addEventListener("click", () => {
+  document
+    .querySelector(".alert")
+    .setAttribute("style", "display: none !important;");
 
+  card.setAttribute("style", "display: none");
+  content.setAttribute("class", "col-lg-6 mb-5 mb-lg-0 desc text-center");
+  title.setAttribute(
+    "style",
+    "margin: 3rem 0 !important; color: hsl(218, 81%, 95%);"
+  );
+});
 
+var alertText = document.querySelector(".text");
 
+document
+  .querySelector(".alert")
+  .setAttribute("style", "display: none !important;");
 
+document.querySelector(".button-al").addEventListener("click", () => {
+  document
+    .querySelector(".alert")
+    .setAttribute("style", "display: flex !important;");
 
+  var clientSurname = document.getElementsByTagName("input")[1].value;
+  var clientName = document.getElementsByTagName("input")[0].value;
+  var clientBudget = +document.getElementsByTagName("input")[2].value;
+  if (clientBudget < total) {
+    alertText.textContent = `${clientSurname} ${clientName} Sizni mablag'ingiz ${clientBudget}sum - xarajatlar ${total}sum Yetarli emas!😒`;
+    document
+      .querySelector(".alert")
+      .setAttribute(
+        "style",
+        "animation: alert 3s 1 alternate ease;"
+      );
+    document
+      .getElementsByTagName("img")[0]
+      .setAttribute("src", "./img/circle-warning.png");
+    document.getElementsByTagName("img")[0].setAttribute("width", "80");
+    alertText.setAttribute("class", "text text-capitalize m-0");
+    alertText.setAttribute(
+      "style",
+      "color: #FF3E3D !important; font-size: 18px; padding-left: 8px;"
+    );
+  } else if (clientBudget >= total) {
+    alertText.textContent = `${clientSurname} ${clientName} Sizning mablag'ingiz ${clientBudget}sum - xarajatlar ${total}sum Yetarli OQ YO'L 👍`;
+    document.querySelector(".alert");
+    document
+      .querySelector(".alert")
+      .setAttribute(
+        "style",
+        "padding: 15px 10px !important; animation: alert 3s 1 alternate ease;"
+      );
+    document
+      .getElementsByTagName("img")[0]
+      .setAttribute("src", "./img/circle-complete.png");
+    document.getElementsByTagName("img")[0].setAttribute("width", "60");
+    alertText.setAttribute(
+      "style",
+      "color: #19D873 !important; font-size: 18px; padding-left: 8px;"
+    );
+    alertText.setAttribute("class", "text text-capitalize m-0");
+  }
 
-
-
-
-
-
-
-
+  console.log(
+    `${clientSurname + clientName} qolgan mablag'ingiz `,
+    clientBudget - total
+  );
+});
 
 // startModal();
 
