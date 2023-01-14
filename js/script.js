@@ -9,15 +9,19 @@ var expenses = {
   parkPrice: 120 * euro,
 };
 var total = expenses.ticketPrice + expenses.hotelPrice + expenses.parkPrice;
+const scoreBtn = document.getElementById("score-link");
 
 document.querySelector(".button").addEventListener("click", () => {
   card.setAttribute("style", "display: flex;");
   content.setAttribute("class", "col-lg-6 mb-5 mb-lg-0 desc text-end");
-  content.setAttribute("style", "transition: all 2s linear");
 
   title.setAttribute(
     "style",
     "margin: 0 0 20px !important; color: hsl(218, 81%, 95%);"
+  );
+  scoreBtn.setAttribute(
+    "style",
+    "transform: rotate(90deg); left: -100px; top: 350px; animation-play-state: paused;"
   );
 });
 
@@ -35,6 +39,10 @@ document.querySelector(".cancel").addEventListener("click", () => {
   title.setAttribute(
     "style",
     "margin: 3rem 0 !important; color: hsl(218, 81%, 95%);"
+  );
+  scoreBtn.setAttribute(
+    "style",
+    "transform: rotate(90deg); left: -100px; top: 350px; animation-play-state: runnig;"
   );
 });
 
@@ -56,10 +64,7 @@ document.querySelector(".button-al").addEventListener("click", () => {
     alertText.textContent = `${clientSurname} ${clientName} Sizni mablag'ingiz ${clientBudget}sum - xarajatlar ${total}sum Yetarli emas!😒`;
     document
       .querySelector(".alert")
-      .setAttribute(
-        "style",
-        "animation: alert 3s 1 alternate ease;"
-      );
+      .setAttribute("style", "animation: alert 3s 1 alternate ease;");
     document
       .getElementsByTagName("img")[0]
       .setAttribute("src", "./img/circle-warning.png");
@@ -183,3 +188,8 @@ document.querySelector(".button-al").addEventListener("click", () => {
 // const { hair, tShirt, interest } = alirahmon;
 
 // console.log(hair, tShirt, interest);
+
+/**
+"Simple Responsive Content Slider" by Michal: https://codepen.io/Kopecky/pen/xswkb
+
+**/

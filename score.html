@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Score</title>
+
+    <style></style>
+  </head>
+  <body class="body">
+    <div class="container">
+      <div class="wrapper">
+        <img
+          class="img-score"
+          src="./img/kirsten-drew-xWdwXtgw-Pg-unsplash.jpg"
+        />
+        <img class="img-score" src="./img/massachusetts-2443907.jpg" />
+        <img
+          class="img-score"
+          src="./img/ruijia-wang-BS9w1QCkJys-unsplash.jpg"
+        />
+        <img class="img-score" src="./img/university-470184.jpg" />
+        <img
+          class="img-score"
+          src="./img/vasily-koloda-8CqDvPuo_kI-unsplash.jpg"
+        />
+        <img
+          class="img-score"
+          src="./img/vadim-sherbakov-d6ebY-faOO0-unsplash.jpg"
+        />
+      </div>
+    </div>
+    <script>
+      let userBall = +prompt("DTMda topgan balingizni kiriting", "100");
+      if (userBall > 180) {
+        alert("Notog'ri qiymat!! Tog'ri qiymatni kiriting masalan: 0 - 180");
+      } else if (userBall <= 180 && userBall >= 130) {
+        alert(
+          `Siz ${userBall}ball topdingiz va grant asosida o'qishga qubul qilindingiz 🎉🧑‍🎓`
+        );
+      } else if (userBall < 130 && userBall >= 100) {
+        alert(
+          `Siz ${userBall}ball topdingiz va kontrakt asosida o'qishga qubul qilindingiz 💵`
+        );
+        const userMoney = +prompt(
+          "kotrakt miqdori yiliga 2000$, Pulingizni kiriting..."
+        );
+        if (userMoney < 2000) {
+          alert(
+            `Mablag'ingiz - ${userMoney}💲 yetmagan summa ${2000 - userMoney}💲`
+          );
+        } else {
+          alert(
+            `Siz o'qishga qabul qilindingiz Mablag'ingiz ${userMoney}💲 qolgan summa ${
+              userMoney - 2000
+            }💲`
+          );
+        }
+      } else if (userBall < 100 && userBall >= 80) {
+        alert(
+          `Siz ${userBall}ball topdingiz va super-kontrakt asosida o'qishga qubul qilindingiz 💰💳`
+        );
+        userMoney = +prompt(
+          "super-kotrakt miqdori yiliga 3000$, Pulingizni kiriting..."
+        );
+        if (userMoney < 3000) {
+          alert(
+            `Mablag'ingiz - ${userMoney}💲 yetmagan summa ${3000 - userMoney}💲`
+          );
+        } else {
+          alert(
+            `Siz o'qishga qabul qilindingiz Mablag'ingiz ${userMoney}💲 qolgan summa ${
+              userMoney - 3000
+            }💲`
+          );
+        }
+      } else {
+        alert(
+          `Siz ${userBall}ball topdingiz va o'qishga qubul qilinmadingiz 😒`
+        );
+      }
+    </script>
+  </body>
+</html>
