@@ -93,11 +93,12 @@ body {
   transform: translateX(30%);
 }
 
-.score-link{
+.score-link {
   border-radius: 5px;
   outline: none;
   border: none;
-  animation: btn .5s linear infinite alternate;
+  animation: btn 0.5s linear infinite alternate;
+  cursor: pointer;
 }
 
 .alert {
@@ -105,12 +106,12 @@ body {
 }
 
 @keyframes btn {
-  0%{
+  0% {
     background-color: blue;
     color: #f3f3f3;
   }
-  
-  100%{
+
+  100% {
     background-color: red;
     color: #f3f3f3;
   }

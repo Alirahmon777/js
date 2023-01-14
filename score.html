@@ -4,13 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Score</title>
 
     <style></style>
   </head>
   <body class="body">
-    <div class="container">
+    <div>
+      <button
+        onclick="location.href='./index.html'"
+        class="page-link score-link index-link"
+        id="score-link"
+        style="
+          position: fixed !important;
+          top: 450px;
+          left: -60px;
+          transform: rotate(90deg);
+          z-index: 1000 !important;
+          cursor: pointer;
+        "
+      >
+        Chet-elga Sayohat
+      </button>
       <div class="wrapper">
         <img
           class="img-score"
@@ -32,7 +53,7 @@
         />
       </div>
     </div>
-    <script>
+    <!-- <script>
       let userBall = +prompt("DTMda topgan balingizni kiriting", "100");
       if (userBall > 180) {
         alert("Notog'ri qiymat!! Tog'ri qiymatni kiriting masalan: 0 - 180");
@@ -81,6 +102,6 @@
           `Siz ${userBall}ball topdingiz va o'qishga qubul qilinmadingiz 😒`
         );
       }
-    </script>
+    </script> -->
   </body>
 </html>
