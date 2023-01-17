@@ -1,3 +1,5 @@
+
+
 "use strict";
 
 const inputNum = document.getElementById("input");
